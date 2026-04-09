@@ -1,0 +1,333 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial, sans-serif;
+  background: #fff;
+  color: #202124;
+  min-height: 100vh;
+}
+
+/* ── Page Layout ── */
+.google-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Header / Nav ── */
+.google-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 20px 0;
+}
+
+.google-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-link {
+  font-size: 13px;
+  color: #202124;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.apps-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.apps-btn:hover {
+  background: rgba(60,64,67,0.08);
+}
+
+.dots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  width: 18px;
+  height: 18px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #5f6368;
+  display: block;
+}
+
+.signin-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #1a73e8;
+  border: none;
+  border-radius: 4px;
+  padding: 9px 23px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.signin-btn:hover {
+  background: #1558b0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* ── Main Content ── */
+.google-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 92px;
+}
+
+/* ── Logo ── */
+.logo-container {
+  margin-bottom: 28px;
+}
+
+.google-logo {
+  width: 272px;
+  height: 92px;
+}
+
+/* ── Search Form ── */
+.search-form {
+  width: 100%;
+  max-width: 584px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 0 14px;
+  gap: 8px;
+  background: #fff;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.search-box:hover,
+.search-box:focus-within {
+  box-shadow: 0 1px 6px rgba(32,33,36,.28);
+  border-color: rgba(223,225,229,0);
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  fill: #9aa0a6;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #202124;
+  background: transparent;
+  height: 100%;
+  caret-color: #1a73e8;
+}
+
+.clear-btn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.clear-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #70757a;
+}
+
+.search-divider {
+  width: 1px;
+  height: 24px;
+  background: #dfe1e5;
+  flex-shrink: 0;
+}
+
+.voice-btn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.voice-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ── Search Buttons ── */
+.search-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-btn,
+.lucky-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0;
+  padding: 0 16px;
+  line-height: 36px;
+  min-width: 54px;
+  height: 36px;
+  white-space: nowrap;
+}
+
+.search-btn:hover,
+.lucky-btn:hover {
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  background-color: #f8f9fa;
+  border-color: #dadce0;
+  color: #202124;
+}
+
+/* ── Privacy Info ── */
+.search-info {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #70757a;
+  text-align: center;
+}
+
+.search-info-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-info-text::before {
+  content: "🦆";
+  font-size: 13px;
+}
+
+/* ── Language ── */
+.language-selector {
+  margin-top: 24px;
+  font-size: 13px;
+  color: #202124;
+}
+
+.lang-link {
+  color: #1558d6;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.lang-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Footer ── */
+.google-footer {
+  background: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+  padding: 15px 30px;
+}
+
+.footer-country {
+  font-size: 15px;
+  color: #70757a;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  font-size: 14px;
+  color: #70757a;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .google-main {
+    padding-top: 60px;
+  }
+
+  .search-form {
+    max-width: calc(100vw - 32px);
+  }
+
+  .google-logo {
+    width: 200px;
+    height: 68px;
+  }
+
+  .google-footer {
+    padding: 15px 16px;
+  }
+}
